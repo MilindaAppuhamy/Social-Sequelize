@@ -1,5 +1,14 @@
+const { db, DataTypes } = require("../db/connection");
 
-let User;
-
+const User = db.define(
+  "User",
+  {
+    username: DataTypes.STRING,
+    email: DataTypes.STRING,
+  },
+  {
+    freezeTableName: true,
+  }
+);
 
 module.exports = User;

@@ -1,4 +1,14 @@
+const { db, DataTypes } = require("../db/connection");
 
-let Like;
+const Like = db.define(
+  "Like",
+  {
+    reactionType: DataTypes.STRING,
+    createdAt: DataTypes.STRING,
+  },
+  {
+    freezeTableName: true,
+  }
+);
 
 module.exports = Like;
